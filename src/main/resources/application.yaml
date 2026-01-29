@@ -1,3 +1,14 @@
 spring:
-  application:
-    name: books
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/book?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: root
+    password: 772100kk
+
+  jpa:
+    hibernate:
+      ddl-auto: update # DB 테이블 자동 생성/수정 옵션
+    show-sql: true     # 실행되는 SQL 쿼리를 로그로 보여줌
+    properties:
+      hibernate:
+        format_sql: true # SQL 로그를 예쁘게 줄바꿈해서 보여줌
